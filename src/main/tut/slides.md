@@ -98,7 +98,7 @@ sttp.get(
 
 ## Query and Decode github user ###
 
-```tut:silent
+```tut:invisible
 import co.enear.presentations._
 ```
 
@@ -154,7 +154,7 @@ def send[R[_]]()(implicit backend: SttpBackend[R, S], isIdInRequest: IsIdInReque
 ## Let's go back to that Id thing ##
 
 
-```tut:book
+```scala
 type Id[A] = A
 ```
 
@@ -221,7 +221,7 @@ response.map(_.unsafeBody)
 ## Type classes ##
 
 ```tut:book
-trait Show[-S] {
+traiT Show[-S] {
     def show(s: S): String
 }
 
@@ -349,6 +349,9 @@ implicit val testingBackend = SttpBackendStub.synchronous
 
 
 # Conclusion #
+
+## Introduction in the past ##
+
 
 ## Credits ##
 
