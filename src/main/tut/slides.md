@@ -96,7 +96,7 @@ sttp.get(
     ).send().unsafeBody
 ```
 
-## Query and Decode github user ###
+## Query and Decode GitHub user ##
 
 ```tut:invisible
 import co.enear.presentations._
@@ -209,7 +209,7 @@ response.map(_.unsafeBody)
 
 ## Higher kinds ##
 
-> We need fancy names for simple things, probably they will pay us better.
+> We need fancy names for simple things
 
 ...
 
@@ -220,14 +220,14 @@ response.map(_.unsafeBody)
 
 ## Type classes ##
 
-```tut:book
-traiT Show[-S] {
+```tut:silent
+trait Show[-S] {
     def show(s: S): String
 }
 
 object Show {
-implicit val intShow: Show[Int] = new Show[Int] {
-def show(value: Int) = value.toString()
+    implicit val intShow: Show[Int] = new Show[Int] {
+        def show(value: Int) = value.toString()
     }
 }
 
